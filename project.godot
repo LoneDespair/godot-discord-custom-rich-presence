@@ -11,9 +11,10 @@ config_version=5
 [application]
 
 config/name="Rich Presence Using Godot"
+config/description="An app for showing custom Discord rich presence."
+config/tags=PackedStringArray("2d", "kinaban", "open_software")
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
-config/tags=PackedStringArray("2d", "kinaban", "open_software")
 
 [autoload]
 
