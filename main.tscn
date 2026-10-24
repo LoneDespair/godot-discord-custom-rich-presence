@@ -29,9 +29,15 @@ theme_override_constants/margin_bottom = 12
 layout_mode = 2
 theme_override_constants/separation = 12
 
+[node name="ApplicationEdit" type="LineEdit" parent="MarginContainer/content" unique_id=595419863]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+placeholder_text = "Application ID"
+
 [node name="ProcessOption" type="OptionButton" parent="MarginContainer/content" unique_id=321175961]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 30)
+custom_minimum_size = Vector2(0, 35)
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_ig7tw")
 selected = 0
@@ -40,12 +46,39 @@ search_bar_enabled = true
 item_count = 1
 popup/item_0/text = "Select a process"
 popup/item_0/id = 0
-popup/item_0/separator = true
 
 [node name="RefreshProcessButton" type="Button" parent="MarginContainer/content" unique_id=2013077457]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 40)
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 text = "Refresh Process List"
+
+[node name="DetailsEdit" type="LineEdit" parent="MarginContainer/content" unique_id=1699511620]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+placeholder_text = "Details"
+
+[node name="StateEdit" type="LineEdit" parent="MarginContainer/content" unique_id=1324984199]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "State"
+
+[node name="LargeImageEdit" type="LineEdit" parent="MarginContainer/content" unique_id=1938082098]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+placeholder_text = "Large Image Key"
+
+[node name="TimestampOption" type="OptionButton" parent="MarginContainer/content" unique_id=1435060952]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 35)
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Start time: Process startup"
+popup/item_0/id = 0
+popup/item_1/text = "Start time: Current time"
+popup/item_1/id = 1
 
 [connection signal="pressed" from="MarginContainer/content/RefreshProcessButton" to="." method="_on_refresh_process_button_pressed"]
